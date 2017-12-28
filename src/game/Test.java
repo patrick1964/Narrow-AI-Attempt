@@ -112,22 +112,12 @@ public class Test {
 		return -1;
 		
 	}
-	public int binarySearch(ArrayList<Integer[]> tryed, int guess,int pos){
-		int first=0;
-		int last=tried.size();
-		boolean found=false;
-		int valG=guess*(int)Math.pow(10, tried.get(0).length-pos);
-		while(!found){
-			if(getVal(tried.get((last+first)/2))<valG)
-				first=(last+first)/2;
-			if(getVal(tried.get((last+first)/2))>valG)
-				last=(last+first)/2;
-			if(getVal(tried.get((last+first)/2))==valG)
-				return (last+first)/2;
-			if(first==last){
-				found=true;
+	public boolean search(int[] arr, int var){
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]==var)
+				return true;
 		}
-		return -1;
+		return false;
 	}
 	//end complete block
 }
